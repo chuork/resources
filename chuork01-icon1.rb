@@ -5,8 +5,8 @@ require 'cairo'
 
 FONT = 'IPAexMincho'
 
-WIDTH  = 240
-HEIGHT = 240
+WIDTH  = 600
+HEIGHT = 600
 
 def main
   write
@@ -45,15 +45,15 @@ def draw_text(context)
   pattern.add_color_stop(0.3, :black)
   pattern.add_color_stop(1.0, 0.0, 0.0, 0.3)
   context.set_source(pattern)
-  show_text(context, 15,  70, 50, "札幌市")
-  show_text(context, 80, 115, 50, "中央区")
-  show_text(context, 70, 225, 50, "会議01")
+  show_text(context,  38, 175, 125, "札幌市")
+  show_text(context, 200, 290, 125, "中央区")
+  show_text(context, 175, 560, 125, "会議01")
 
   context.set_source_rgb(0.9, 0.0, 0.0)
-  show_text(context, 40, 170, 65, "Ruby")
+  show_text(context, 100, 425, 163, "Ruby")
 
   context.set_source_rgb(0.1, 0.1, 0.2)
-  show_text(context, 115, 22, 24, "#chuork01")
+  show_text(context, 288, 55, 60, "#chuork01")
 end
 
 def show_text(context, x, y, size, text)
